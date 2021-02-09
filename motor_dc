@@ -1,0 +1,21 @@
+int buttonState = 0;
+
+void setup()
+{
+  pinMode(2, INPUT);
+  pinMode(A0, OUTPUT);
+  pinMode(13, OUTPUT);
+}
+
+void loop()
+{
+ buttonState = digitalRead(2);
+  if(buttonState == HIGH){
+    digitalWrite(A0, HIGH);
+    digitalWrite(13, HIGH);
+  }else{
+    digitalWrite(A0, LOW);
+    digitalWrite(13, LOW);
+  }
+  delay(10);
+}
